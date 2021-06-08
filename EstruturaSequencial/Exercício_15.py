@@ -13,14 +13,20 @@
 # = Salário Liquido : R$
 
 while True:
+    
     try:
         hora = float(input('Qual o valor da hora trabalhada?: ').replace(',','.'))
     except ValueError:
         print('Número inválido.')
     else:
-        break        
-
-numero_horas = float(input('Quantas horas de trabalho por mês?: ').replace(',','.'))
+        while True:
+            try:
+                numero_horas = float(input('Quantas horas de trabalho por mês?: ').replace(',','.'))
+            except ValueError:
+                print('Número inválido.')
+            else:
+                break
+        break
 
 salario_bruto = hora * numero_horas
 ir = salario_bruto * 0.11
