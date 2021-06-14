@@ -7,6 +7,9 @@ for i in range(1,3):
     while True:
         try:
             x = float(input(f'Digite a {i}ª anota: ').replace(',','.'))
+            while x > 10 or x < 0:
+                print('Nota Inválida.')
+                x = float(input(f'Digite a {i}ª anota: ').replace(',','.'))
             notas.append(x)
         except ValueError:
             print('Nota Inválida.')
